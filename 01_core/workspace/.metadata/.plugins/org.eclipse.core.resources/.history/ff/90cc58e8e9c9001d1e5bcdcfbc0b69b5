@@ -1,0 +1,22 @@
+package com.greedy.section01.fieldinjection;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class BookService {
+
+	private BookDAO bookDAO;
+	
+	public List<BookDTO> findAllBooks(){
+		
+		return bookDAO.findAllBooks();
+	}
+	
+	public BookDTO findOneBookBySequence(int sequence) {
+		
+		return bookDAO.findOneBookBySequence(sequence);
+	}
+	
+}

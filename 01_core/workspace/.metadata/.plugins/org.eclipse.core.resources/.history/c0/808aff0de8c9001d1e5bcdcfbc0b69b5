@@ -1,0 +1,11 @@
+package com.greedy.section01.fieldinjection;
+
+public class BookDTO {
+
+	private int sequence;
+	private int isbn;
+	private String title;
+	private String author;
+	private String publsher;
+	private java.util.Date createDate;
+}

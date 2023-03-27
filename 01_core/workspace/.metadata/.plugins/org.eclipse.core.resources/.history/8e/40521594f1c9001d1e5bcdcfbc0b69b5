@@ -1,0 +1,38 @@
+package com.greedy.section02.constinjection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class MakeRandomString {
+	
+	private final RandomGenerator random;
+	/* 생성자 주입의 장점
+	 * 1. 필드에 final 키워드 사용이 가능해진다. 안정성있는 코드 작성
+	 * 2. 스프링 컨테이너와 결합도가 낮기 때문에 테스트하기 좋다. (스프링 설정 없이 테스트코드를 작성할 수 있다.)
+	 * 3. 필드 주입이 간단하긴 하지만 단일 책임의 원칙 관점에서 볼 때 좋지 않다.
+	 * 	  많은 필드주입이 일어난다는 이야기는 해당 객체가 너무 많은 책임을 가지고 있다는 의미를 가진다.
+	 * */
+	
+	
+	/*
+	 * public MakeRandomString() { random = null; }
+	 */
+	
+	@Autowired
+	public MakeRandomString(RandomGenerator random) {
+		this.random = random;
+	}
+	
+	public String getRandomLengthString() {
+		
+		StringBuilder sb = new StringBuilder();
+		
+		int randomNumber = random.getRandomNumber();
+		for(int i = random.getStartNum(); i <= randomNumber; i++) {
+			sb.append("*");
+		}
+		
+		return sb.toString();
+	}
+}

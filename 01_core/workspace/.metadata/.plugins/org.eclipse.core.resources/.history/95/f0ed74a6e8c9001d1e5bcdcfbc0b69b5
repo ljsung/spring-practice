@@ -1,0 +1,21 @@
+package com.greedy.section01.fieldinjection;
+
+import java.util.List;
+
+public class BookDAOImpl implements BookDAO{
+
+	private map<Integer, BookDTO> bookList;
+	
+	@Override
+	public List<BookDTO> findAllBooks() {
+	
+		return null;
+	}
+
+	@Override
+	public BookDTO findOneBookBySequence(int sequence) {
+	
+		return null;
+	}
+
+}

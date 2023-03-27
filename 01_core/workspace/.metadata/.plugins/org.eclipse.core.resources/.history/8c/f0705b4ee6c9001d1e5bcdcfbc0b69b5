@@ -1,0 +1,12 @@
+package com.greedy.section02.xmlconfig;
+
+public class Application {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context =
+				new GenericxmlApplicationContext("com/greedy/section02/xmlconfig/config/spring-context.xml");
+
+	}
+
+}

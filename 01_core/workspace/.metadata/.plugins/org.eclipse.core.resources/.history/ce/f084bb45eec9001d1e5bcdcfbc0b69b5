@@ -1,0 +1,34 @@
+package com.greedy.section02.constinjection;
+
+public class RandomNumberGenerator implements RandomGenerator{
+
+	private int startNum;
+	private int endNum;
+	
+	public RandomNumberGenerator(int startNum, int endNum) {
+		
+		if(startNum >= endNum) {
+			throw new Exception("시작");
+		}
+	}
+	
+	@Override
+	public int getRandomNumber() {
+		
+		return 0;
+	}
+
+	@Override
+	public int getStartNum() {
+		
+		return 0;
+	}
+
+	@Override
+	public int getEndNum() {
+		
+		return 0;
+	}
+
+	
+}

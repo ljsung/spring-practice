@@ -1,0 +1,13 @@
+package com.greedy.section02.constinjection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+public class MakeRandomString {
+	
+	private RandomGenerator random;
+
+	@Autowired
+	public MakeRandomString(RandomGenerator random) {
+		this.random = random;
+	}
+}

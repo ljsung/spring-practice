@@ -1,0 +1,18 @@
+package com.greedy.section01.singleton.javaconfig.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.greedy.section01.singleton.javaconfig.Bread;
+import com.greedy.section01.singleton.javaconfig.Product;
+
+@Configuration
+public class ContextConfiguration {
+
+	@Bean
+	public Product carpBread() {
+		
+		return new Bread("붕어빵", 1000, new java.util.Date());
+	}
+	
+}

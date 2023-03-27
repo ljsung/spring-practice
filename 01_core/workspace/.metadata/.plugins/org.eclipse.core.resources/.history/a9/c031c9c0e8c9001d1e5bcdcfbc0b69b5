@@ -1,0 +1,29 @@
+package com.greedy.section01.fieldinjection;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class BookDAOImpl implements BookDAO{
+
+	private Map<Integer, BookDTO> bookList;
+	
+	public BookDAOImpl() {
+		this.bookList = new HashMap<>();
+		
+		this.bookList.put(1, new BookDTO())
+	}
+	
+	@Override
+	public List<BookDTO> findAllBooks() {
+	
+		return null;
+	}
+
+	@Override
+	public BookDTO findOneBookBySequence(int sequence) {
+	
+		return null;
+	}
+
+}

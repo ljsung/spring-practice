@@ -1,0 +1,22 @@
+package com.greedy.section01.properties.javaconfig.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+import com.greedy.section01.properties.javaconfig.Bread;
+import com.greedy.section01.properties.javaconfig.Product;
+
+@Configuration
+@PropertySource("product-info.properties")
+public class ContextConfiguration {
+
+	private String carpBreadName;
+	private int carpBreadPrice;
+	
+	@Bean
+	public Product carpBread() {
+		
+		return new Bread(carpBreadName, carpBreadPrice, new java.util.Date());
+	}
+}
